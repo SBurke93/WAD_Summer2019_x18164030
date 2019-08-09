@@ -1,0 +1,19 @@
+{
+  "name": "wadnodeproject",
+  "version": "1.0.0",
+  "description": "Web App development main Project worth 50% , small scalable  application allowing users to view all of the Premier Leagues new signings and stats to accompany, allowing viewers a better understanding of how these players might integrate with their new teams for the the 19/20 season.  ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SBurke93"
+  },
+  "author": "Steven Burke",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}

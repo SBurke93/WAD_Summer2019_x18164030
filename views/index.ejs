@@ -1,69 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="app.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>MY_WAD_PROJECT</title>
-
-</head>
-<body>
-        <div class="header">
-                <div class="imhold"><img alt="lo" id="poster" class="logiIm" src='/logo.png'></div>
-                 <div class="navhold">
-                  <div class="topnav">
-                  <a href="/">Home</a>
-                  <a href="#" >Products</a>
-                  <a href="#"  >Add Product</a>
-                  <a href="/contacts">Contact</a>
-                  </div>
-                </div>
-                </div>
-                
-
-
-
-<div class="landing">
-</div>
-
-
+<% include ../partials/header %>
+<div class="animsition-overlay" data-animsition-overlay="true">
 <div class="container" style= "display:none;">
     
-    <h1 style="text-align:center; font-size:16vw; ">TOP 6</h1>
+    <h1 style="text-align:center; font-size:14vw; ">TOP 3</h1>
+    <h2>Season: 18/19</h2>
+    <p>Choose a team to reveal all of their summer signings</p>
 
     <div id="right">
-            <h3>ARSENAL</h3><img src="arsenal.png" class="showcase" alt="Arsenal" style="width:300px;height:300px; border-radius: 50%; position:center;">
-
-
-    </div>
-
+        <h3>MAN CITY</h3><a href="/contacts" class="animsition-link"><img src="manc.png" class="showcase" alt="Manchester City" style="width:320px;height:320px; border-radius: 50%; position:center;"></a>
+        </div>
+    
     <div id="left">
-
-
+            <h3>CHELSEA</h3><a href="/chelsea" class="animsition-link"><img src="chelsea.png" class="showcase" alt="Chelsea" style="width:320px;height:320px; border-radius: 50%; position:center;"></a>
     </div>
 
 
     <div id="center">
-
-
+            <h3>LIVERPOOL</h3><a href="/liverpool" class="animsition-link"><img src="liverpool.png" class="showcase" alt="Liverpool" style="width:320px;height:320px; border-radius: 50%; position:center;"></a>
     </div>
 
-
 </div>
-
-
-
-
-
-
-
-
-
+</div>
 <script>
-	$(document).ready(function(){
-		$('.container').slideDown(1500);
-	});
+        $(document).ready(function(){
+            $('.container').slideDown(1500);
+        });
 </script>
-</body>
-</html>
+    
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Joao Cancelo",
+        "nationality": "Portugal",
+        "age": "27",
+        "position": "Defender",
+        "fee" : "60 million",
+        "previous": "Juventus"
+
+    },
+
+  
+    {
+        "id": 2,
+        "name": "Rodrigo Hernández Cascante",
+        "nationality": "England",
+        "age": "23",
+        "position": "Midfielder",
+        "fee" : "68 million",
+        "previous": "Athletico Madrid"
+    
+    },
+
+    {
+        "id": 3,
+        "name": "Jose  Esmoris Tasende",
+        "nationality": "Spain",
+        "age": "23",
+        "position": "Defender",
+        "fee" : "5 million",
+        "previous": "PSV"
+        
+    }
+
+
+]

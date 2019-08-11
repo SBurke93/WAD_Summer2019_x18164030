@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+
+<div class="row">
+  <h1>Welcome to the edit contact page  <br>
+<div style="text-align: center; width: 100%; background-color: rgba(255, 255, 255, 0.8);text-align: center; margin-bottom: 10px;" >
+         
+         
+    <% res.forEach(function(indOne) {%>     
+         <form accept-charset="UTF-8" style="display: inline-block; width: 90%;" action="/editsigning/<%= indOne.id %>" method="post" >    
+                <div class="item">
+                  
+                        <label for="name">Name</label>
+                        <input name="name" type="text" placeholder="Enter name" />
+        
+                        <label for="price">Nationality</label>
+                        <input name="nationality" type="text" placeholder="Enter nationality" />
+        
+                        <label for="age">Age</label> 
+                        <input name="age" type="text" placeholder="Enter age" />
+        
+                        <label for="position">Position</label> 
+                        <input name="position" type="text" placeholder="Enter position" />
+        
+                        <label for="fee">Fee</label> 
+                        <input name="fee" type="text" placeholder="Enter fee" />
+        
+                        <label for="club">Previous Club</label> 
+                        <input name="previous" type="text" placeholder="Enter previous club" />
+        
+<button class="button">Edit</button>
+          </div>
+              </form>
+              
+              <% }) %>
+              
+    </div>
+  </h1>
+</div>
+
+
+
+<% include ../partials/footer %>

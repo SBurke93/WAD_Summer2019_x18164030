@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+
+<div class="row">
+  <h1>Add new Signing</h1>  
+  <br>
+  	<div style="width: 100%; padding:20px; background-color:#2C0231; text-align: center; margin-bottom: 10px;" action="/add" method="post" >
+
+
+
+          <form accept-charset="UTF-8" style="display: inline-block;  width: 70%;" action="/add" method="post">
+          <div class="item">
+
+                <label for="name">Name</label>
+                <input name="name" type="text" placeholder="Enter name" />
+
+                <label for="price">Nationality</label>
+                <input name="nationality" type="text" placeholder="Enter nationality" />
+
+                <label for="age">Age</label> 
+                <input name="age" type="text" placeholder="Enter age" />
+
+                <label for="position">Position</label> 
+                <input name="position" type="text" placeholder="Enter position" />
+
+                <label for="fee">Fee</label> 
+                <input name="fee" type="text" placeholder="Enter fee" />
+
+                <label for="club">Previous Club</label> 
+                <input name="previous" type="text" placeholder="Enter previous club" />
+
+
+
+
+
+                <button class="button">Add</button>
+          </div>
+          </form>
+
+ 
+</div>
+
+
+
+<% include ../partials/footer %>

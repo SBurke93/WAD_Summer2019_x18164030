@@ -3,55 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="app.css" type="text/css">
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="../dist/css/animsition.min.css">
+    <!-- animsition.js -->
+    <script src="../dist/js/animsition.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>MY_WAD_PROJECT</title>
+    <title>WAD_PROJECT</title>
 
 </head>
-  <body>
-    <div class="header">
-      <div class="imhold"><img alt="lo" id="poster" class="logiIm" src='/logo.png'></div>
-        <div class="navhold">
-        <div class="topnav">
-        <a href="/">Home</a>
-        <a href="#" >Products</a>
-        <a href="#"  >Add Product</a>
-        <a href="#">Academic Section</a>
-  </div>
+<body>
+    
+<div class="landing"> <img src="manc.png" id= "banner">
+        <div class="header">
+                
+                 <div class="navhold">
+                  <div class="topnav">
+                  <a href="/">Home</a>
+                  <a href="/add">Add Signing</a>
+                  <a href="/sayHello">Contact Us</a>
+                  </div>
+                </div>
+          </div>
 </div>
+
+
+
+
+<div id="hiddenInfo" style="display:none;">
+  
+
+                    <div class="item">     
+                  
+                    <h1 class="itemh">Established: <%= teammanc.established %></h1>
+                    <p class="itemp">Premier League Wins: <%= teammanc.PLwins %></p>
+                    <p class="itemp">Champions League Wins: <%= teammanc.CLwins %></p> 
+                    <p class="itemp">Total Goals: <%= teammanc.totalGoals %></p>
+                    <p class="itemp">Clean Sheets: <%= teammanc.cleanSheets %></p>
+                    
+                </div>
+                
 </div>
+
+
+
 
 
 <div class="row">
-            <div class="holder">
+        
+         
+      <h1 style="font-size: 112px;">MANCHESTER CITY</h1>
+      <h2>Summer Signings</h2>
+      <br>
+            
+        
+      <div class="grid-container">
+        <% contact.forEach(function(contact) { %>
+                       
+                      
+                        <div class="item">     
+                        <h1 class="itemh">Signing:<%= contact.id %> </h1>
+                        <h1 class="itemh">Name: <%= contact.name %></h1>
+                        <p class="itemp">Nationality: <%= contact.nationality %></p>
+                        <p class="itemp">Age: <%= contact.age %></p> 
+                        <p class="itemp">Position: <%= contact.position %></p>
+                        <p class="itemp">Fee: <%= contact.fee %></p>
+                        <p class="itemp">Previous Club: <%= contact.previous %></p>
+                        <a href="/editcontact/<%= contact.id %>" class="button">Edit</a>
+                        <p class="button" id="doit<%= contact.id %>">Delete</a>
+                        <p id="yes<%= contact.id %>" style="display:none">
+                        Are you sure?
+                        <a href="/deletecontact/<%= contact.id %>" class="button">Yes</a>
+                        </p>
+                    </div>
+
+           
     
-                  <div class="large">
-                  <h1>Running</h1>
-                  <h2>Accessories</h2>
-            </div>
-        
-    <div class="normal">
-        <h1>Swimming</h1>
-        <h2>Accessories</h2>
-        
-    </div>
-              
-    <div class="normal2">
-        <h1>Cycling</h1>
-        <h2>Accessories</h2>
-        
-    </div>
-    
-            </div>
-
-    </div>
-
-
-<div class="footer">
-  <p>Liams Node.js Application</p>
-<p>Images from Pixabay.com</p>
+  
+        <% }); %>
+                          
+      </div>
 </div>
 
 
-    </body>
-</html>
+
+
+
+
+<script>
+    $(document).ready(function(){
+      $("#doit<%= contact.id %>").click(function(){
+      $("#yes<%= contact.id %>").slideToggle(2000);
+
+      }); 
+    });
+  </script>
+
+<script>
+    $(document).ready(function(){
+        $('#banner').slideDown(1200);
+    });
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $('#banner').click(function(){
+       $('#hiddenInfo').slideToggle(2000);
+    });
+
+});
+</script>
+
+<% include ../partials/footer %>
